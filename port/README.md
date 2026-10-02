@@ -27,6 +27,15 @@ fork, no re-diffing by hand — `git merge` does the work.
 
 ## Syncing from upstream
 
+One-time setup in your local clone (git remotes do not survive through
+GitHub merges — add it wherever you sync from):
+
+```bash
+git remote add upstream https://github.com/chasmlol/SkyCraft.git
+```
+
+Then, to sync:
+
 ```bash
 git fetch upstream
 git log --oneline HEAD..upstream/main   # what's new?
